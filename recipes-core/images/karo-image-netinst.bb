@@ -1,6 +1,6 @@
 inherit deploy
 
-require karo-image.inc
+require recipes-core/images/karo-image.inc
 
 COMPATIBLE_MACHINE = "(mx8|mx93)"
 
