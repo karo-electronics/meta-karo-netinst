@@ -8,7 +8,7 @@ uuu_version 1.4.77
 # This file flashes $image to $machine
 
 ### boot U-Boot with fastboot support
-SDP: boot -f $image_bootloader-$machine-mfg.bin
+SDPS: boot -f $image_bootloader-$machine-mfg.bin
 SDPV: write -f $image_bootloader-$machine-mfg.bin -skipspl
 SDPV: jump
 
@@ -38,7 +38,6 @@ $flash_cmds
 
 FB: ucmd setenv fdt_addr 42000000
 FB: ucmd run loadfdt;fdt addr $${fdt_addr};fdt resize
-FB: ucmd load mmc $${mmcdev}:$${mmcpart} $${loadaddr} imx8mp-qsxp-ksz9031.dtb;fdt apply $${loadaddr}
 FB: ucmd run loadkernel
 FB: ucmd setenv fastboot_buffer 42800000
 FB: download -f uInitrd
