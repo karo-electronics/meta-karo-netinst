@@ -15,6 +15,6 @@ IMAGE_FEATURES = ""
 IMAGE_INSTALL = "" 
 
 do_install_initrd () {
-    install -D ${THISDIR}/uInitrd ${DEPLOY_DIR_IMAGE}/${BPN}/
+    unzip -o ${THISDIR}/uInitrd.zip -d ${DEPLOY_DIR_IMAGE}/${BPN}/
 }
 addtask install_initrd after do_create_uuu_auto_script before do_build
