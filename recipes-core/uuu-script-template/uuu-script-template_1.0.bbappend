@@ -7,7 +7,7 @@ SRC_URI = " \
     file://uuu.auto.template${@bb.utils.contains('KARO_BASEBOARD','qsbase','.${KARO_BASEBOARD}','',d)} \
 "
 LICENSE = "GPL-2.0-or-later"
-LIC_FILES_CHKSUM = "file://uuu.auto.template${@bb.utils.contains('KARO_BASEBOARD','qsbase','.${KARO_BASEBOARD}','',d)};beginline=3;endline=7;md5=d1866cc8881b6a65ff00c310746803a8"
+LIC_FILES_CHKSUM = "file://uuu.auto.template${@bb.utils.contains('KARO_BASEBOARD','qsbase','.${KARO_BASEBOARD}','',d)};beginline=3;endline=7;md5=c977ef98526baa4c6f3f8d22bf25cd73"
 LIC_FILES_CHKSUM:mx9-nxp-bsp = "file://uuu.auto.template${@bb.utils.contains('KARO_BASEBOARD','qsbase','.${KARO_BASEBOARD}','',d)};beginline=3;endline=7;md5=c977ef98526baa4c6f3f8d22bf25cd73"
 
 S = "${WORKDIR}"
