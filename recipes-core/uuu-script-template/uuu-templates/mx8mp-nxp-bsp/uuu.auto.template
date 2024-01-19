@@ -8,10 +8,8 @@ uuu_version 1.4.77
 # This file flashes $image to $machine
 
 ### boot U-Boot with fastboot support
-SDP: boot -f $image_bootloader-$machine-mfg.bin
-SDPV: write -f $image_bootloader-$machine-mfg.bin -skipspl
-SDPV: jump
-
+SDPS: boot -f $image_bootloader-$machine-mfg.bin
+ 
 ### Writing default u-boot to emmc
 FB: flash mmc0boot0 $image_bootloader-$machine-default.bin
 
